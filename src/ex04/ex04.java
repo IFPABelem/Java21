@@ -1,3 +1,10 @@
+/*
+4. Uma frota de 16 veículos precisa ser cadastrada. Faça um programa Java capaz de fazer este
+cadastro com os seguintes dados: placa, ano, modelo, localidade, cor, marca. De ante mão o
+programador deve estar ciente que todos os carros são de São Paulo, além disso, todos são da
+marca Ford. Utilize arranjo para guardar as referências dos objetos. O programa não deve ter
+métodos set e nem método toString(), somente deve ter métodos get().
+*/
 package ex04;
 
 import javax.swing.JOptionPane;

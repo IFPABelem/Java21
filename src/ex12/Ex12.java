@@ -11,12 +11,22 @@ package ex12;
 import javax.swing.JOptionPane;
 
 public class Ex12 {
+    private static int getTamanho (String texto) {
+        int tamanho = Integer.parseInt(JOptionPane.showInputDialog(texto));
+        if (tamanho <= 0) {
+            do {
+                tamanho = Integer.parseInt(JOptionPane.showInputDialog("O valor tem que ser maior que zero! " + texto));
+            } while (tamanho <= 0);
+        }
+        return tamanho;
+    }
+
     private static boolean isStringEmpty(String string) {
         return (string == null || string.length() == 0);
     }
 
     public static void main(String[] args) {
-        int tamanho = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de moradores:"));
+        int tamanho = getTamanho("Quantidade de moradores:");
         Morador[] moradores = new Morador[tamanho];
         for (int i = 0; i < moradores.length; i++) {
             String nome = JOptionPane.showInputDialog("Nome (se não soube deixe em branco):");

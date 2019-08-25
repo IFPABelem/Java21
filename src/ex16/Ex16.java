@@ -8,8 +8,18 @@ package ex16;
 import javax.swing.JOptionPane;
 
 public class Ex16 {
+    private static int getTamanho (String texto) {
+        int tamanho = Integer.parseInt(JOptionPane.showInputDialog(texto));
+        if (tamanho <= 0) {
+            do {
+                tamanho = Integer.parseInt(JOptionPane.showInputDialog("O valor tem que ser maior que zero! " + texto));
+            } while (tamanho <= 0);
+        }
+        return tamanho;
+    } 
+
     public static void main(String[] args) {
-        int tamanho = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de jogadores:"));
+        int tamanho = getTamanho("Quantidade de jogadores:");
         Jogador[] jogadores = new Jogador[tamanho];
         for (int i = 0; i < jogadores.length; i++) {
             jogadores[i] = new Jogador();

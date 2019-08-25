@@ -9,8 +9,18 @@ package ex10;
 import javax.swing.JOptionPane;
 
 public class Ex10 {
+    private static int getTamanho (String texto) {
+        int tamanho = Integer.parseInt(JOptionPane.showInputDialog(texto));
+        if (tamanho <= 0) {
+            do {
+                tamanho = Integer.parseInt(JOptionPane.showInputDialog("O valor tem que ser maior que zero! " + texto));
+            } while (tamanho <= 0);
+        }
+        return tamanho;
+    }
+
     public static void main(String[] args) {
-        int tamanho = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de produtos:"));
+        int tamanho = getTamanho("Quantidade de produtos:");
         Produto[] produtos = new Produto[tamanho];
         for (int i = 0; i < produtos.length; i++) {
             produtos[i] = new Produto();
