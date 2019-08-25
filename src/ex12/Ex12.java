@@ -10,8 +10,6 @@ package ex12;
 
 import javax.swing.JOptionPane;
 
-import com.sun.org.apache.bcel.internal.generic.Type;
-
 public class Ex12 {
     private static boolean isStringEmpty(String string) {
         return (string == null || string.length() == 0);
@@ -45,7 +43,6 @@ public class Ex12 {
         String texto = "Lista de moradores:\n";
         for (Morador morador : moradores) {
             texto += morador;
-
         }
 
         JOptionPane.showMessageDialog(null, texto);
