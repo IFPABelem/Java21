@@ -10,7 +10,7 @@ package ex08;
 
 import javax.swing.JOptionPane;
 
-public class Main {
+public class Ex08 {
     public static void main(String[] args) {
         Inventario obj1 = new Inventario();
         Inventario obj2 = new Inventario();
