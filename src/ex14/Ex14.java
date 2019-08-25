@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 public class Ex14 {
     public static void main(String[] args) {
-        int tamanho = 3;
+        int tamanho = 20;
         Taxi[] taxis = new Taxi[tamanho];
         for (int i = 0; i < taxis.length; i++) {
             taxis[i] = new Taxi();
