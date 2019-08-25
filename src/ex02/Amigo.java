@@ -1,9 +1,5 @@
 package ex02;
 
-import javax.swing.JOptionPane;
-
-import com.sun.org.apache.xml.internal.security.Init;
-
 public class Amigo {
     private String nome;
     private String sexo; // M || F
