@@ -7,4 +7,4 @@ jdk:
   - oraclejdk9
   - openjdk8
 script:
-  - javac $(find . | grep .java)
+  - javac $(find . | grep .java | egrep -v ex21)
