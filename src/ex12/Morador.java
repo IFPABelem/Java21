@@ -33,7 +33,7 @@ public class Morador {
             idadeSrt = "" + idade;
         }
 
-        return "Nome= " + nome + ", Idade= " + idade + ", Nome da mãe= " + mae + ", Naturalidade= " + naturalidade + "\n";
+        return "Nome= " + nome + ", Idade= " + idadeSrt + ", Nome da mãe= " + mae + ", Naturalidade= " + naturalidade + "\n";
     }
 
     public String getNome() {
