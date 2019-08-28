@@ -10,10 +10,13 @@ import javax.swing.JOptionPane;
 public class Ex16 {
     private static int getTamanho (String texto) {
         int tamanho = Integer.parseInt(JOptionPane.showInputDialog(texto));
-        if (tamanho <= 0) {
-            do {
-                tamanho = Integer.parseInt(JOptionPane.showInputDialog("O valor tem que ser maior que zero! " + texto));
-            } while (tamanho <= 0);
+//        if (tamanho <= 0) {
+//            do {
+//                tamanho = Integer.parseInt(JOptionPane.showInputDialog("O valor tem que ser maior que zero! " + texto));
+//            } while (tamanho <= 0);
+//        }
+        while (tamanho <= 0) {
+            tamanho = Integer.parseInt(JOptionPane.showInputDialog("O valor tem que ser maior que zero! " + texto));
         }
         return tamanho;
     } 
