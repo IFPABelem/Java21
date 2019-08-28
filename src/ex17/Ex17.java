@@ -14,10 +14,15 @@ public class Ex17 {
     public static void main(String[] args) {
         double n1 = Double.parseDouble(JOptionPane.showInputDialog("Insira o primeiro valor"));
         double n2 = Double.parseDouble(JOptionPane.showInputDialog("Insira o segundo valor"));
-        JOptionPane.showMessageDialog(null, "Soma: "+somar(n1,n2));
-        JOptionPane.showMessageDialog(null, "Subtrair: "+subtrair(n1,n2));
-        JOptionPane.showMessageDialog(null, "Multiplicar: "+multiplicar(n1,n2));
-        JOptionPane.showMessageDialog(null, "Dividir: "+dividir(n1,n2));
+
+
+        String texto = "Resultados (A, B):\n";
+        texto += "Soma: " + somar(n1,n2) + "\n";
+        texto += "Subtrair: " + subtrair(n1,n2) + "\n";
+        texto += "Multiplicar: " + multiplicar(n1,n2) + "\n";
+        texto += "Dividir: " + dividir(n1,n2) + "\n";
+
+        JOptionPane.showMessageDialog(null, texto);
     }
     
     public static double somar(double n1, double n2) 
