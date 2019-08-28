@@ -9,20 +9,26 @@ import javax.swing.JOptionPane;
 public class Ex18 {
     private static int getTamanho (String texto, int minimo) {
         int tamanho = Integer.parseInt(JOptionPane.showInputDialog(texto));
-        if (tamanho < minimo) {
-            do {
-                tamanho = Integer.parseInt(JOptionPane.showInputDialog("O valor tem que ser maior que ou igual" + minimo + "! " + texto));
-            } while (tamanho < minimo);
+//        if (tamanho < minimo) {
+//            do {
+//                tamanho = Integer.parseInt(JOptionPane.showInputDialog("O valor tem que ser maior que ou igual" + minimo + "! " + texto));
+//            } while (tamanho < minimo);
+//        }
+        while (tamanho < minimo) {
+            tamanho = Integer.parseInt(JOptionPane.showInputDialog("O valor tem que ser maior que ou igual" + minimo + "! " + texto));
         }
         return tamanho;
     }
 
     private static int getEquipe (String texto, int maximo, int ultimoId) {
         int id = getTamanho(texto, 0);
-        if (id > (maximo-1) || id == ultimoId) {
-            do {
-                id = getTamanho("O valor tem que ser menor que " + maximo + " e não pode ter o mesmo ID que a equipe anterior! " + texto, 0);
-            } while (id > (maximo-1) || id == ultimoId);
+//        if (id > (maximo-1) || id == ultimoId) {
+//            do {
+//                id = getTamanho("O valor tem que ser menor que " + maximo + " e não pode ter o mesmo ID que a equipe anterior! " + texto, 0);
+//            } while (id > (maximo-1) || id == ultimoId);
+//        }
+        while (id > (maximo-1) || id == ultimoId) {
+            id = getTamanho("O valor tem que ser menor que " + maximo + " e não pode ter o mesmo ID que a equipe anterior! " + texto, 0);
         }
         return id;
     }
