@@ -3,13 +3,31 @@ package ex15;
 
 
 public class Pelotao {
-    private Soldado[] soldado;
+    private Soldado[] soldados;
+    private String nome;
 
-    public Soldado[] getSoldado() {
-        return soldado;
+    @Override
+    public String toString() {
+        String txt = "";
+        for (Soldado soldado : soldados) {
+            txt += soldado.getNome()+"\n";
+        }
+        return "Pelotao "+nome+"\nSoldados:\n" + txt;
     }
 
-    public void setSoldado(Soldado[] soldado) {
-        this.soldado = soldado;
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Soldado[] getSoldados() {
+        return soldados;
+    }
+
+    public void setSoldados(Soldado[] soldados) {
+        this.soldados = soldados;
     }
 }
