@@ -8,10 +8,13 @@ import javax.swing.JOptionPane;
 public class Ex02 {
     public static void main(String[] args) {
         int idade = Integer.parseInt(JOptionPane.showInputDialog("Idade:"));
-        if (18 > idade || 60 < idade) {
-            do {
-                idade = Integer.parseInt(JOptionPane.showInputDialog("Idade errada pois, poderão ser meus amigos pessoas entre 18 e 60 anos. Nova:"));
-            } while (18 > idade || 60 < idade);
+//        if (18 > idade || 60 < idade) {
+//            do {
+//                idade = Integer.parseInt(JOptionPane.showInputDialog("Idade errada pois, poderão ser meus amigos pessoas entre 18 e 60 anos. Nova:"));
+//            } while (18 > idade || 60 < idade);
+//        }
+        while (18 > idade || 60 < idade) {
+            idade = Integer.parseInt(JOptionPane.showInputDialog("Idade errada pois, poderão ser meus amigos pessoas entre 18 e 60 anos. Nova:"));
         }
 
         Amigo amigo = new Amigo();
