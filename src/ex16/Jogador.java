@@ -21,8 +21,8 @@ public class Jogador {
         this.palitinhos = palitinhos;
     }
 
-    public int getJogadoresQt() {
-        return jogadoresQt;
+    public static int getJogadoresQt() {
+        return Jogador.jogadoresQt;
     }
 
     public static void setJogadoresQt(int jogadoresQt) {
